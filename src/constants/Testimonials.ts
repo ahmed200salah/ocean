@@ -1,6 +1,6 @@
 import { Testimonials } from "@/types/interfaces";
 
-export const Testimonials: Testimonials[] = [
+export const Testimonialss: Testimonials[] = [
   {
     imageUrl: "/testimonials/user-1.jpg",
     name: "ahmed taha",
