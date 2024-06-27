@@ -8,11 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      container:{
-        center:true,
-        padding:'1.5rem',
+      container: {
+        center: true,
+        padding: "1.5rem",
       },
-      transitionDuration:300,
     },
   },
   plugins: [],
