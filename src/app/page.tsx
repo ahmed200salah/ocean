@@ -1,13 +1,10 @@
 import Button from "@/components/Button";
 import FeatureCard from "@/components/FeatureCard";
-import Footer from "@/components/Footer";
 import Heading from "@/components/Heading";
-import PricingCard from "@/components/PricingCard";
 import PricingPage from "@/components/PricingPage";
 import Start from "@/components/Start";
 import TestimonialsCard from "@/components/TestimonialsCard";
 import FeatureBlock from "@/components/featureBlock";
-import { PricingItems } from "@/constants/Pricing";
 import { Testimonials } from "@/constants/Testimonials";
 import { clients } from "@/constants/clients";
 import { Feauters, featuresBlock } from "@/constants/features";

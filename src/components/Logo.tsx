@@ -4,7 +4,6 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 import { ScrollTrigger } from "gsap/all";
-import { delay } from "framer-motion";
 
 export default function Logo() {
   gsap.registerPlugin(ScrollTrigger);
