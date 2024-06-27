@@ -1,112 +1,148 @@
+import Button from "@/components/Button";
+import FeatureCard from "@/components/FeatureCard";
+import Footer from "@/components/Footer";
+import Heading from "@/components/Heading";
+import PricingCard from "@/components/PricingCard";
+import PricingPage from "@/components/PricingPage";
+import Start from "@/components/Start";
+import TestimonialsCard from "@/components/TestimonialsCard";
+import FeatureBlock from "@/components/featureBlock";
+import { PricingItems } from "@/constants/Pricing";
+import { Testimonials } from "@/constants/Testimonials";
+import { clients } from "@/constants/clients";
+import { Feauters, featuresBlock } from "@/constants/features";
+import {
+  ArrowRightCircle,
+  MoveRight,
+  MoveRightIcon,
+  PlayCircle,
+} from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
+    <main className="overflow-x-hidden pt-24 lg:pt-28 antialiased">
+      <div className="relative container">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src="/bg.png"
+          alt="Background Image"
+          width={1200}
+          height={1000}
+          className="absolute top-0 left-0 -z-50 opacity-10 "
         />
-      </div>
+        <section id="home" className="relative">
+          <figure className="bubble bg-[#667BC6] lg:w-[520px] top-16 -left-40 h-96 w-96" />
+          <figure className="bubble bg-[#4C3BCF] lg:w-[420px] bottom-16 -right-20 md:bottom-44 md:right-20 h-96 w-96" />
+          <div className="flex flex-col text-center space-y-12">
+            <div className="flex flex-col items-center space-y-6 ">
+              <Start />
+              <div className="flex items-center gap-4 box">
+                <Link href="#pricing">
+                  <Button variants="primary">
+                    <h1 className="truncate font-bold">Get Started</h1>
+                    <MoveRight />
+                  </Button>
+                </Link>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
+                <Link href="#pricing">
+                  <Button variants="outline">
+                    <h1 className=" truncate">View Pricing</h1>
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            <span className="box z-10  absolute max-sm:top-[60%] max-sm:left-[41%] top-[50%] left-[47%]">
+              <PlayCircle className="w-20 h-20 cursor-pointer max-sm:top-[60%] max-sm:left-[41%] max-sm:w-16 max-sm:h-16 absolute top-[50%] left-[47%] z-10 text-[#4B70F5] hover:scale-110 transition-all hover:text-[#8DECB4]" />
             </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+            <Image
+              src="/Hero-image.svg"
+              alt="banner"
+              width={670}
+              height={370}
+              className="mx-auto shadow-xl box lg:w-[1000px] lg:h-[650px] opacity-75"
+            />
+          </div>
+        </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+        <section
+          id="clients"
+          className=" max-w-[62rem] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-12 gap-y-4"
         >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          {clients.map((client, index) => (
+            <div key={index} className="flex justify-center">
+              <Image
+                src={client.imageUrl}
+                alt={client.alt}
+                width={100}
+                height={80}
+                className="w-40 md:w-full object-contain mx-auto"
+              />
+            </div>
+          ))}
+        </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+        <section
+          id="features"
+          className="flex flex-col gap-y-12 md:gap-y-20 lg:gap-y-28 "
         >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+          <div className="relative grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+            <Image
+              src="/bg2.png"
+              alt="background"
+              width={1920}
+              height={1080}
+              className="absolute opacity-5 -z-50 top-0 left-0 w-full object-cover"
+            />
+            <div className="flex flex-col gap-4 items-center text-center lg:items-start lg:text-start boxx">
+              <Heading title="Powerful features to help you manage all your leads." />
+              <p className=" lg:max-w-[34rem] leading-normal sm:text-lg sm:leading-8 text-base">
+                Apsum dolor sit amet consectetur. Aliquam elementum elementum in
+                ultrices. Dui maecenas ut eros turpis ultrices metus morbi
+                aliquet vel.
+              </p>
+              <Button>Get Started</Button>
+            </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+            <div className="grid md:grid-cols-2 lg:grid-cols-1 gap-4 boxx">
+              {Feauters.map((feature, index) => (
+                <FeatureCard key={index} {...feature} />
+              ))}
+            </div>
+          </div>
+
+          {featuresBlock.map((item, index) => (
+            <FeatureBlock key={index} {...item} />
+          ))}
+        </section>
+
+        <PricingPage />
+        <section id="Testimonials" className="">
+          <Heading title="Meet our Customers" isCentered={true} />
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 mt-10">
+            {Testimonials.map((item, index) => (
+              <TestimonialsCard key={index} {...item} />
+            ))}
+          </div>
+        </section>
+
+        <section id="contact">
+          <div className="bg-slate-800 rounded-lg px-8 lg:px-24 py-8 lg:py-12 flex flex-col lg:flex-row justify-between items-center gap-6">
+            <div className="flex flex-col gap-4 items-center lg:items-start">
+              <Heading title="Let’s try our service now!" />
+              <p className="text-[#94A3B8] mt-3 max-w-[50rem] leading-normal ">
+                Experience the power of Ocean CRM dashboard for engineering
+                teams. Boost productivity and streamline collaboration. Get
+                started today!
+              </p>
+            </div>
+              <Button>
+                Get Started
+                <MoveRightIcon/>
+              </Button>
+          </div>
+        </section>
+
       </div>
     </main>
   );
