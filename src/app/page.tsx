@@ -5,7 +5,7 @@ import PricingPage from "@/components/PricingPage";
 import Start from "@/components/Start";
 import TestimonialsCard from "@/components/TestimonialsCard";
 import FeatureBlock from "@/components/featureBlock";
-import { Testimonials } from "@/constants/Testimonials";
+import { Testimonialss } from "@/constants/Testimonials";
 import { clients } from "@/constants/clients";
 import { Feauters, featuresBlock } from "@/constants/features";
 import {
@@ -117,7 +117,7 @@ export default function Home() {
         <section id="Testimonials" className="">
           <Heading title="Meet our Customers" isCentered={true} />
           <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 mt-10">
-            {Testimonials.map((item, index) => (
+            {Testimonialss.map((item, index) => (
               <TestimonialsCard key={index} {...item} />
             ))}
           </div>
@@ -133,13 +133,12 @@ export default function Home() {
                 started today!
               </p>
             </div>
-              <Button>
-                Get Started
-                <MoveRightIcon/>
-              </Button>
+            <Button>
+              Get Started
+              <MoveRightIcon />
+            </Button>
           </div>
         </section>
-
       </div>
     </main>
   );
